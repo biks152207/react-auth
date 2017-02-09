@@ -43,8 +43,6 @@ const register = (req, res, next) =>{
         }
       })
       user.save((err, user) =>{
-        console.log(err);
-        console.log('error');
         if (err) { return next(err);}
         let userInfo = setUserInfo(user);
         return res.status(201).json({
